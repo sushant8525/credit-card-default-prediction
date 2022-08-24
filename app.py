@@ -25,7 +25,7 @@ def predict():
 	print(features_arr)
 	print("prediction value: ", prediction)
 
-	result = ""
+	result =  ""
 	if prediction == 1:
 		result = "The credit card holder will be Defaulter in the next month"
 	else:
