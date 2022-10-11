@@ -1,5 +1,4 @@
 # Credit Card Defaulter prediction 
-
 ## Table of Content
   * [Demo](#demo)
   * [Overview](#overview)
@@ -10,8 +9,6 @@
   * [Depoyment on Heroku](#deployment_on_heroku)
   * [Directory Tree](#directory-tree)  
   * [Technologies Used](#technologies-used)
-
-
 ## Demo
 Link: [https://credit-card-defaulter-predict.herokuapp.com/](https://credit-card-defaulter-predict.herokuapp.com/)
 
