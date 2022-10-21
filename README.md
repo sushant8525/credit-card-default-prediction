@@ -59,6 +59,9 @@ We will build a random forest model to predict whether a given customer defaults
 
 [![](https://i.imgur.com/4HjhfDQ.png)](https://credit-card-defulter-predict.herokuapp.com/)
 https://credit-card-defulter-predict.herokuapp.com/
+
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sushant-jagtap-b93a771a/)
+
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
