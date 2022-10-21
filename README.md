@@ -25,7 +25,8 @@ We will build a random forest model to predict whether a given customer defaults
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <h2> :book: Data Summery</h2>
-# There are 25 variables:
+
+   **There are 25 variables**:
 
 * - **ID**: ID of each client
 
@@ -33,7 +34,7 @@ We will build a random forest model to predict whether a given customer defaults
 
 * - **SEX**: Gender (1=male, 2=female)
 
-*- **EDUCATION**: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)
+* - **EDUCATION**: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)
 
 * - **MARRIAGE**: Marital status (1=married, 2=single, 3=others)
 * - **AGE**: Age in years
