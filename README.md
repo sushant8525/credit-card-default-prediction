@@ -1,77 +1,59 @@
-# Credit Card Defaulter prediction 
-## Table of Content
-  * [Demo](#demo)
-  * [Overview](#overview)
-  * [Motivation](#motivation)
-  * [Dataset Information](#dataset-information)
-  * [Technical Aspect](#technical-aspect)
-  * [Installation](#installation)
-  * [Depoyment on Heroku](#deployment_on_heroku)
-  * [Directory Tree](#directory-tree)  
-  * [Technologies Used](#technologies-used)
-## Demo
-Link: [https://credit-card-defaulter-predict.herokuapp.com/](https://credit-card-defaulter-predict.herokuapp.com/)
+<p align="center"> 
+  <img src="images/2.jpg" alt="images/2.jpg" width="80px" height="80px">
+</p>
+<h1 align="center"> Credit Card Defaulter prediction </h1>
+<p align="center"> 
+<img src="images/all.jpg" alt="images/all.jpg" height="382px">
+</p>
+<h2> :book: Problem Statement</h2>
+The Credit Card Fraud Detection Problem includes modeling past credit card transactions with the knowledge of the ones that turned out to be a fraud. This model is then used to identify whether a new transaction is fraudulent or not.
 
-[![](https://i.imgur.com/4HjhfDQ.png)](https://credit-card-defaulter-predict.herokuapp.com/)
+<h2> :floppy_disk: Project Files Description</h2>
+We will build a random forest model to predict whether a given customer defaults or not. Credit default is one of the most important problems in the banking and risk analytics industry. There are various attributes which can be used to predict default, such as demographic data (age, income, employment status, etc.), (credit) behavioural data (past loans, payment, number of times a credit payment has been delayed by the customer etc.).
+
+<h2> :book:Introduction</h2>
+This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005.
+
+<h2> :book: Data Summery</h2>
+# ##### There are 25 variables:
+# 
+# - **ID**: ID of each client
+# - **LIMIT_BAL**: Amount of given credit in NT dollars (includes individual and family/supplementary credit
+# - **SEX**: Gender (1=male, 2=female)
+# - **EDUCATION**: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)
+# - **MARRIAGE**: Marital status (1=married, 2=single, 3=others)
+# - **AGE**: Age in years
+# - **PAY_0**: Repayment status in September, 2005 (-1=pay duly, 1=payment delay for one month, 2=payment delay for two months, … 8=payment delay for eight months, 9=payment delay for nine months and above)
+# - **PAY_2**: Repayment status in August, 2005 (scale same as above)
+# - **PAY_3**: Repayment status in July, 2005 (scale same as above)
+# - **PAY_4**: Repayment status in June, 2005 (scale same as above)
+# - **PAY_5**: Repayment status in May, 2005 (scale same as above)
+# - **PAY_6**: Repayment status in April, 2005 (scale same as above)
+# - **BILL_AMT1**: Amount of bill statement in September, 2005 (NT dollar)
+# - **BILL_AMT2**: Amount of bill statement in August, 2005 (NT dollar)
+# - **BILL_AMT3**: Amount of bill statement in July, 2005 (NT dollar)
+# - **BILL_AMT4**: Amount of bill statement in June, 2005 (NT dollar)
+# - **BILL_AMT5**: Amount of bill statement in May, 2005 (NT dollar)
+# - **BILL_AMT6**: Amount of bill statement in April, 2005 (NT dollar)
+# - **PAY_AMT1**: Amount of previous payment in September, 2005 (NT dollar)
+# - **PAY_AMT2**: Amount of previous payment in August, 2005 (NT dollar)
+# - **PAY_AMT3**: Amount of previous payment in July, 2005 (NT dollar)
+# - **PAY_AMT4**: Amount of previous payment in June, 2005 (NT dollar)
+# - **PAY_AMT5**: Amount of previous payment in May, 2005 (NT dollar)
+# - **PAY_AMT6**: Amount of previous payment in April, 2005 (NT dollar)
+# - **default.payment.next.month**: Default payment (1=yes, 0=no)
+
+<h2> :book: Depoyment on Heroku</h2>
+  ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+![App](https://github.com/sushant8525/Boston-house-price-prediction/blob/main/images/1.png)
+
+[![](https://i.imgur.com/4HjhfDQ.png)](https://credit-card-defulter-predict.herokuapp.com/)
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
-## Overview
-This is a classification model for a most common dataset, Credit Card defaulter prediction. Prediction of the next month credit card defaulter based on demographic and last six months behavioral data of customers.
 
-## Motivation
-There are times when even a seemingly manageable debt, such as credit cards, goes out of control. Loss of job, medical crisis or business failure are some of the reasons that can impact your finances. In fact, credit card debts are usually the first to get out of hand in such situations due to hefty finance charges (compounded on daily balances) and other penalties.
 
-A lot of us would be able to relate to this scenario. We may have missed credit card payments once or twice because of forgotten due dates or cash flow issues. But what happens when this continues for months? How to predict if a customer will be defaulter in next months?
 
-To reduce the risk of Banks, this model has been developed to predict customer defaulter based on demographic data like gender, age, marital status and behavioral data like last payments, past transactions etc.
 
-## Dataset Information
-This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in _Taiwan from April 2005 to September 2005_.
-
-## Technical Aspect
-This project is divided into two part:
-1. Training a [RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) classification model using [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) to predict defaulter as accurate as possible.
-	- Cleaning the datasets, fixing all features
-	- Applying all GridSearchCV to obtain optimal hyperparameters
-	- Apply Classification ML model
-2. Building and hosting a Flask web app on Heroku.
-	- Build the web app using Flask API
-	- Upload the project on GitHub
-    - Get the customer information from Web app
-    - Display the prediction 
-
-## Installation
-The Code is written in Python 3.7. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after [cloning](https://www.howtogeek.com/451360/how-to-clone-a-github-repository/) the repository:
-```bash
-pip install -r requirements.txt
-```
-
-## Depoyment on Heroku
-Create a new repositoryon [GitHub](https://github.com) and upload the project.
-
-Follow the instruction given on [Heroku Documentation](https://devcenter.heroku.com/articles/getting-started-with-python) to deploy a web app.
-
-## Directory Tree 
-```
-├── templates 
-│   └── index.html
-├── app.py
-├── credit-card-default.csv
-├── credit_default_prediction.py
-├── model.pkl
-├── Procfile
-├── README.md
-└── requirements.txt
-```
-
-## Technologies Used
-
-![](https://forthebadge.com/images/badges/made-with-python.svg)
-
-[<img target="_blank" src="https://numpy.org/images/logos/numpy.svg" width=100>](https://numpy.org)    [<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/450px-Pandas_logo.svg.png" width=150>](https://pandas.pydata.org)    [<img target="_blank" src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width=150>](https://scikit-learn.org/stable)   [<img target="_blank" src="https://www.statsmodels.org/stable/_images/statsmodels-logo-v2-horizontal.svg" width=170>](https://www.statsmodels.org)
-
-[<img target="_blank" src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" width=150>](https://flask.palletsprojects.com/en/1.1.x/) [<img target="_blank" src="https://number1.co.za/wp-content/uploads/2017/10/gunicorn_logo-300x85.png" width=200>](https://gunicorn.org) [<img target="_blank" src="https://matplotlib.org/_static/logo2_compressed.svg" width=170>](https://matplotlib.org)      [<img target="_blank" src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" width=150>](https://seaborn.pydata.org)
-
-[<img target="_blank" src="https://jupyter.org/assets/nav_logo.svg" width=150>](https://jupyter.org)
 
 
