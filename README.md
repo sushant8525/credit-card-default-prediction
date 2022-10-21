@@ -8,18 +8,23 @@
 <h2> :book: Problem Statement</h2>
 The Credit Card Fraud Detection Problem includes modeling past credit card transactions with the knowledge of the ones that turned out to be a fraud. This model is then used to identify whether a new transaction is fraudulent or not.
 
-<h2> :floppy_disk: Project Files Description</h2>
-We will build a random forest model to predict whether a given customer defaults or not. Credit default is one of the most important problems in the banking and risk analytics industry. There are various attributes which can be used to predict default, such as demographic data (age, income, employment status, etc.), (credit) behavioural data (past loans, payment, number of times a credit payment has been delayed by the customer etc.).
 
 <h2> :book:Introduction</h2>
 This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005.
 
+<h2> :floppy_disk: Project Files Description</h2>
+We will build a random forest model to predict whether a given customer defaults or not. Credit default is one of the most important problems in the banking and risk analytics industry. There are various attributes which can be used to predict default, such as demographic data (age, income, employment status, etc.), (credit) behavioural data (past loans, payment, number of times a credit payment has been delayed by the customer etc.).
+
+
 <h2> :book: Data Summery</h2>
 # ##### There are 25 variables:
 # 
-# - **ID**: ID of each client
-# - **LIMIT_BAL**: Amount of given credit in NT dollars (includes individual and family/supplementary credit
-# - **SEX**: Gender (1=male, 2=female)
+* - **ID**: ID of each client
+
+* - **LIMIT_BAL**: Amount of given credit in NT dollars (includes individual and family/supplementary credit
+
+* - **SEX**: Gender (1=male, 2=female)
+
 # - **EDUCATION**: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)
 # - **MARRIAGE**: Marital status (1=married, 2=single, 3=others)
 # - **AGE**: Age in years
